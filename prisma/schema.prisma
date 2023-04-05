@@ -13,7 +13,5 @@ datasource db {
 model Posts {
   id            Int      @id @default(autoincrement())
   imageName     String
-  totalComments Int      @default(0)
-  totalLikes    Int      @default(0)
   created       DateTime @default(now())
 }

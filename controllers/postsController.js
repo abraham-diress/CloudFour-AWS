@@ -21,7 +21,6 @@ export const getAllPosts = async (req, res) => {
 export const createPost = async (req, res) => {
   try {
     const file = req.file;
-    const caption = req.body.caption;
     const imageName = generateFileName();
 
     if (!file) {
@@ -37,7 +36,6 @@ export const createPost = async (req, res) => {
     const post = await prisma.posts.create({
       data: {
         imageName,
-        caption,
       },
     });
 
